@@ -1,0 +1,261 @@
+jobscriptID	jobname	date submitted	status	description
+MI000001	MI000001_1	2018-11-01		run fastqc on adaptor-untrimmed trombone samples;summarise results using multiqc
+MI000001	MI000001_2	2018-11-01		repeat for multiqc only;didn't work the first time
+MI000001	MI000001_3	2019-01-09		run fastqc and multiqc on MAP samples
+MI000001	MI000001_4			run fastqc and multiqc for data MI000046_4
+MI000001	MI000001_5		done	run fastqc and multiqc for data MI000046_5
+MI000001	MI000001_6			run fastqc and multiqc for data MI000045_7
+MI000002	MI000002_1	2018-11-05		run trimming using flexbar and rerun qc
+MI000003	MI000003_1	2018-11-06		align paired reads from one sample without adaptor trimming
+MI000003	MI000003_2	2018-11-11		align normal/tumour samples from same patient using human plus spike in ref;F260001-3
+MI000003	MI000003_3	2018-11-17		align normal/tumour samples from same patient using human plus spike in ref;F260007-10
+MI000003	MI000003_4	2018-11-19		align normal/tumour samples from same patient using human plus spike in ref;F260004-6
+MI000004	MI000004_1	2018-11-06		create a hisat2 index
+MI000004	MI000004_2	2018-11-10		create a hisat2 index using hg and ercc assembly
+MI000004	MI000004_3	2018-12-07		build hisat2 index with exons and splice sites
+MI000004	MI000004_4	07/04/2019 16:17:52		build hisat2 index with exons and splice sites;hg19
+MI000004	MI000004_5	07/04/2019 20:16:20		build hisat2 index with exons and splice sites;hg38
+MI000005	MI000005_1	2018-11-08		convert SAM output from MI000003_1 to BAM
+MI000005	MI000005_2	2018-11-09		produce index for BAM file (.bai);repeat SAM->BAM conversion using sort function
+MI000005	MI000005_3	2018-11-12		sort and index multiple sam files
+MI000005	MI000005_4	2018-11-19		sort and index multiple sam files;F260007-10
+MI000006	MI000006_1	2018-11-08		test adaptor trimming for one sample
+MI000006	MI000006_2	2018-11-27		qc post trim sample from MI000006_1
+MI000006	MI000006_3	2019-01-30		adaptor trim for DS000001	 individual qc and summarise qc report
+MI000006	MI000006_4	2019-01-30		rerun qc and summarise due to syntax error;output in DS000001_MI000006_3_fastqc folder
+MI000006	MI000006_5	2019-01-31		rerun multiqc
+MI000006	MI000006_6	05/09/2019 13:22:52		run qc and summarise for cell line dataset SRR79439XX; hormone treated and untreated
+MI000007	MI000007_1	2018-11-12		run transcript assembly and quantification
+MI000007	MI000007_2	2018-11-19		run transcript assembly and quantification;F260007-10
+MI000007	MI000007_3	2018-11-20		run transcript assembly and quantification using hisat with -e option;F260007-10
+MI000007	MI000007_4	2018-11-20		run transcript assembly and quantification using hisat with -e option;F260001-3
+MI000008	MI000008_1	2018-11-13		create index for reference genome (samtools)
+MI000008	MI000008_2	06/21/2019 16:06:03		create index for ref genome sans ercc
+MI000009	MI000009_1	2018-11-20		converting stringtie output for deseq2
+MI000010	MI000010_1	2018-12-03		create index for reference transcript (kallisto)
+MI000010	MI000010_2	07/04/2019 23:56:11		create kallisto index;hg19
+MI000010	MI000010_3	07/05/2019 00:02:24		create kallisto index;hg38
+MI000011	MI000011_1	2018-12-04		generate abundance estimates for all samples using kallisto (F260001-10)
+MI000011	MI000011_2	2018-12-06		generate abundance estimates for all samples using kallisto (F260001-10);re-do for concatenated lane 1 and lane 2 samples
+MI000011	MI000011_3	2018-12-10		generate abundance estimates for Stratosphere MAP samples using kallisto
+MI000011	MI000011_4		qw	generate abundance estimates using kallisto
+MI000012	MI000012_1	2018-12-06		concatenate L001 and L002 for all samples (F260001-10)
+MI000012	MI000012_2	2018-12-06		concatenate L001 and L002 for all samples (F260001-10);re-do for both R1 and R2
+MI000013	MI000013_1	2018-12-13		align paired reads for multiple sample without adaptor trimming;F260007-10;combined L001 and L002;include exons and splice sites into index file for alignment
+MI000013_JS2	MI000013_2	2018-12-14		align paired reads for multiple sample without adaptor trimming;F260001-6 and MAP1-3;combined L001 and L002;include exons and splice sites into index file for alignment
+MI000014	MI000014_1	2018-12-11		create star genome index
+MI000014	MI000014_2	07/06/2019 13:33:49		create genome index; STAR; hg19
+MI000014	MI000014_3	07/06/2019 14:08:04		create genome index; STAR; hg38
+MI000014	MI000014_4		create genome index; STAR; grch37
+MI000015	MI000015_1	2018-12-17		align without adaptor trimming using star;F26 and MAP samples;multi-thread
+MI000016	MI000016_1	2018-12-18		convert SAM to sorted BAM for output from hisat2 and star
+MI000016	MI000016_2	2018-12-19		rerun indexing due to syntax error;missing double quotes
+MI000016	MI000016_3			convert sam to sorted bam for output from MI000024_1
+MI000016	MI000016_4	2019-01-28		convert sam to sorted bam for output from MI000028_1
+MI000016	MI000016_5	2019-02-05		convert sam to sorted bam for output from MI000032_1
+MI000016	MI000016_6	2019-03-12		convert sam to sorted bam for lncap dataset from ncbi
+MI000016	MI000016_7	2019-03-25		convert sam to sorted bam for lncap and vcap dataset
+MI000016	MI000016_8	03/28/2019 15:31:12		convert sam to sorted bam for PCmeth matched set
+MI000016	MI000016_9	06/14/2019 01:15:45		convert sam to bam for DS000003
+MI000016	MI000016_10			convert sam to bam for DS000001
+MI000017	MI000017_1	2018-12-19		run transcript assembly and quantification for samples processed using hisat2 and star
+MI000017	MI000017_2	2019-01-29		run transcript assembly and quantification for output from MI000016_4
+MI000017	MI000017_3	2019-02-07		run transcript assembly and quantification for output from MI000023_5
+MI000017	MI000017_4	2019-02-12		run transcript assembly and quantification for MI000033_2_F260009
+MI000017	MI000017_5	2019-03-12		run transcript assembly and quantification for lncap dataset
+MI000017	MI000017_6	03/26/2019 09:45:47		run transcript assembly and quantification for lncap and vcap dataset
+MI000017	MI000017_7	03/28/2019 18:33:14		run transcript assembly and quantification for PCmeth matched set
+MI000017	MI000017_8	04/29/2019 09:37:39		run transcript assembly and quantification for subsampled DS000003
+MI000017	MI000017_9	04/30/2019 14:07:38		run transcript assembly and quantification for subsampled DS000001
+MI000033	MI000033_1		error	transfer earlier DS000001 folders to RDS;permission denied
+MI000018	MI000018_1	12/20/2018		converting stringtie output for deseq2 for DS000001
+MI000018	MI000018_2	01/29/2019		converting stringtie output for deseq2 for lncap
+MI000018	MI000018_3	02/26/2019		converting stringtie output for deseq2 for spike in samples
+MI000018	MI000018_4			converting stringtie output for deseq2 for trombone samples
+MI000018	MI000018_5	01/25/2019		converting stringtie output for deseq2 for lncap dataset		
+MI000018	MI000018_6	05/09/2019 16:49:36		converting stringtie output for cell line dataset SRR79439XX; hormone treated and untreated
+MI000019	MI000019_1			run transcript assembly and quantification for DS000001 using cufflinks workflow;Step 1 - cufflinks
+MI000020	MI000020_1			create index for reference transcript (salmon)
+MI000021	MI000021_1	01/10/2019		run fastqc and multiqc on SAM and sorted BAM files for DS000001 set
+MI000021	MI000021_2	01/14/2019		repeat multiqc step
+MI000021	MI000021_3	06/14/2019 15:29:37		fastqc and multiqc DS000003
+MI000021	MI000021_4			fastqc and multiqc DS000001
+MI000021	MI000021_5	2019/07/22 14:15:40		qc for DS000001 post aln hisat2
+MI000021	MI000021_6	2019/07/22 14:14:35		qc for DS000001 post aln star
+MI000021	MI000021_7	2019/07/25 15:14:03	running	qc for DS000005 raw data
+MI000021	MI000021_8			running	qc for MI000049_1 
+MI000021	MI000021_9			running	qc for MI000049_2
+MI000022	MI000022_1	01/15/2019		run picard on one sorted bam file
+MI000023	MI000023_1	01/16/2019		run picard on trombone files
+MI000023_JS2	MI000023_2	01/16/2019		run picard on DS000001 set minus trombone
+MI000023	MI000023_3	01/17/2019		re-running for remaining trombone star files due to time running out
+MI000023	MI000023_4	01/21/2019 13:57:08		run picard for output from MI000024_1 
+MI000023	MI000023_5	02/06/2019 17:50:00		run picard for output from MI000032_1
+MI000023	MI000023_6	03/12/2019 11:20:59		run picard MarkDups for lncap data
+MI000023	MI000023_7	03/25/2019 15:10:56		run picard MarkDups for lncap and vcap data
+MI000023	MI000023_8	03/28/2019 16:57:39		run picard MarkDups for PCmeth matched set
+MI000023	MI000023_9	06/14/2019 17:22:54		run picard MarkDups for DS000003
+MI000024	MI000024_1	01/18/2019 18:34:22		hisat2 align F260007-10 plus two CRPC samples with filtering params
+MI000024	MI000024_2	01/22/2019 23:05:48		align F260007-10 plus two CRPC samples with filtering params;job 2 - added min alignment score param;deleted dir
+MI000025	MI000025_1	06/08/2019 19:41:09		general align runscript for running hisat2 or star with comparable params;star;deleted dir
+MI000025	MI000025_2	06/12/2019 04:42:28		general align runscript for running hisat2 or star with comparable params;hisat2;deleted dir
+MI000025	MI000025_3	06/12/2019 04:42:27		repeat MI000025_1 for cell line GSE120660
+MI000025	MI000025_4	06/12/2019 11:37:51		repeat MI000025_2 for cell line GSE120660
+MI000025	MI000025_5				repeat hisat for strat samples due to typo
+MI000026	MI000026_1	2019/01/21 17:11:05	done	download lncap data from ebi arrayexpress
+MI000026	MI000026_2	2019/01/23 18:49:23	done	continue download lncap data from ebi arrayexpress
+MI000027	MI000027_1	01/24/2019 17:52:49		summary from samtools idxstats for DS000001
+MI000028	MI000028_1	01/25/2019 15:51:22		align lncap data using hisat2
+MI000028	MI000028_2	03/06/2019 10:54:04		run hisat2 on lncap data 
+MI000028	MI000028_3	03/06/2019 13:44:27		run hisat2 for SE data;fixed syntax error
+MI000028	MI000028_4	03/07/2019 11:14:38		run hisat2 for SE data
+MI000029	MI000029_1	01/29/2019 01:48:13		create test dataset;sample 25p from one trombone and one crpc
+MI000030	MI000030_1	01/29/2019 14:49:35		count duplicated reads per chromosome for DS000001
+MI000030	MI000030_2	03/14/2019 17:25:06		count duplicated reads per chromosome for DS000001 post adapter trim
+MI000031	MI000031_1	01/31/2019 16:42:21		test zip output from trimmomatic
+MI000031	MI000031_2	01/31/2019 18:31:20		zip output from trimmomatic
+MI000032	MI000032_1	02/04/2019 13:14:21		align adapter-trimmed DS000001 using hisat2
+MI000033	MI000033_1	02/08/2019 11:00:00		repeat aln + sorting + marking dups for F260009
+MI000033	MI000033_2	02/11/2019 15:52:36		repeat marking dups for F260009;increase TMPDIR space 
+MI000033	MI000033_3			aln+sort+markdups+index for F260009; aln once
+MI000034	MI000034_1	02/11/2019 22:44:17	done	create fastq for index reads;BC;deleted dir
+MI000034	MI000034_2	02/12/2019 10:59:57	done	BC create fastq for index reads with params;deleted dir
+MI000035	MI000035_1	03/04/2019 09:16:13		download lncap data from NCBI SRA
+MI000035	MI000035_2	03/05/2019 10:06:30		continue download lncap data from NCBI
+MI000035	MI000035_3	03/06/2019 19:34:52		download dmso treated lncap data
+MI000035	MI000035_4	03/07/2019 10:00:00		download SRA files from list using fastq-dump;array job
+MI000035	MI000035_5	03/22/2019 10:00:00		download cell line hormone treated and untreated
+MI000035	MI000035_6	03/28/2019 09:54:35		download cell line data from same set as PC meth data
+MI000035	MI000035_7					download cell line androgen treated and untreated;GSE120660
+MI000035	MI000035_8			download cell line;GSE120660
+MI000035	MI000035_9			download treated untreated rnaseq;PRJNA219507
+MI000036	MI000036_1	03/05/2019 14:08:50		run fastqc and multiqc on downloaded data;lncap from NCBI
+MI000037	MI000037_1	03/11/2019 21:23:29		align lncap sra data treated vs untreated
+MI000037	MI000037_2	2019/03/25 11:04:32		align lncap and vcap sra data
+MI000037	MI000037_3	2019/03/28 14:32:39		align lncap data that matches PC meth data
+MI000038	MI000038_1	2019/04/26 17:39:51		subsample from BAM files (DS000003);deleted dir
+MI000038	MI000038_2	2019/04/29 17:06:34		subsample from BAM files (DS000001);deleted dir
+MI000039	MI000039_1	completed	wget GSE84043
+MI000039	MI000039_2	completed	wget grch37 gtf files
+MI000040	MI000040_1	2019/05/22 15:15:19		picard estimate library complexity for DS000001
+MI000041	MI000041_1	2019/05/28 12:17:31		picard collect alignment summary metrics for DS000001
+MI000041	MI000041_2	2019/05/29 10:49:05		picard collect alignment summary metrics for DS000003
+MI000042	MI000042_1			submit R script
+MI000043	MI000043_1		r	count number of reads in bam file
+MI000044	MI000044_1	2019/07/17 16:30:31		aln+sort+markdups;DS000001+DS000003;hisat2
+MI000044	MI000044_2	2019/07/22 13:41:44		aln+sort+markdups;DS000001+DS000003;star
+MI000045	MI000045_1	2019/07/24 15:04:28		Pre-adaptor trim QC + trim adaptor seq + post-adaptor trim QC;deleted dir
+MI000045	MI000045_2			fixed runscript to include QC for pre-adaptor trim
+MI000045	MI000045_3	completed	adaptor trimming;MI000046_4;6xtbln
+MI000045	MI000045_4	completed	adaptor trimming;MI000046_5;4xtbln
+MI000045	MI000045_5	completed	adaptor trimming;MI000046_6;F26
+MI000045	MI000045_6		time runout	adaptor trimming;Project_H01_run0958
+MI000045	MI000045_7	completed	adaptor trimming;Project_H01_run0958;restart adaptor trim 
+MI000046	MI000046_1	completed	concatenate L001 and L002 files for DS000005
+MI000046	MI000046_2			concatenate L001 and L002 files;repeat MI000046_1 due to error for data in MI000049_1;deleted dir
+MI000046	MI000046_3			concatenate L001 and L002 files for data in MI000049_2;deleted dir
+MI000046	MI000046_4			switched cat to zcat;for data in MI000049_1
+MI000046	MI000046_5			switched cat to zcat;for data in MI000049_2
+MI000047	MI000047_1	completed	download fastq using BaseSpace CLI;deleted dir
+MI000048	MI000048_1	completed	aln+sort+markdups+post-alnQC;DS000005;hisat2
+MI000048	MI000048_2	completed	aln+sort+markdups+post-alnQC;DS000005;star
+MI000048	MI000048_3			aln+sort+markdups+post-alnQC;DS000003;star
+MI000049	MI000049_1	completed	download from basespace RUN=189854687,PROJECT=138593469,DESC=3xTBLN1019 2T1NT; 3xTBLN1025 2T1NT
+MI000049	MI000049_2	completed	download from basespace RUN=189852694,PROJECT=138596471,DESC=2xTBLN1001 2T; 2xTBLN1002 2T
+MI000050	MI000050_1		pending	generic bash script to download data from bs on login node
+MI000051	MI000051_1	completed	quantification using stringtie (generic script);DS000001
+MI000051	MI000051_2	completed	quantification using stringtie;DS000005
+MI000051	MI000051_3	completed	stringtie quantification;INPATH=MI000058_2
+MI000051	MI000051_4	completed	stringtie quantification;INPATH=MI000058_3
+MI000051	MI000051_5			stringtie quantification;INPATH=MI000058_4
+MI000051	MI000051_6			stringtie quantification;INPATH=MI000058_5
+MI000051	MI000051_7			stringtie quantification;INPATH=MI000058_10
+MI000051	MI000051_8			stringtie quantification;INPATH=MI000058_9
+MI000051	MI000051_9			stringtie quantification;Rajan
+MI000052	MI000052_1	completed	create index for sorted bam INPATH=/home/rebmism/Scratch/output/MI000044_2
+MI000052	MI000052_2	completed	create index for sorted bam INPATH=/home/rebmism/Scratch/output/MI000048_2
+MI000052	MI000052_3	completed	create index for cascade new RG
+MI000052	MI000052_4	completed	create index for cascade new RG bam;attempt number 2
+MI000052	MI000052_5		done	create index for sorted bam INPATH=/home/rebmism/Scratch/output/MI000058_2
+MI000052	MI000052_6		done	create index for sorted bam INPATH=/home/rebmism/Scratch/output/MI000058_3
+MI000052	MI000052_7	2019/11/12	done	create index for sorted bam MI000058_4
+MI000052	MI000052_8	2019/11/12	done	create index for sorted bam MI000058_5
+MI000052	MI000052_9			create index for sorted bam MI000058_9
+MI000052	MI000052_10			create index for sorted bam MI000058_10
+MI000053	MI000053_1		done	test picard CollectRnaSeqMetrics RRNA_REF=/home/rebmism/reference/genome/human/ucsc/hg19/hg19.ribosomal.interval_list.txt
+MI000053	MI000053_2		done	test picard CollectRnaSeqMetrics RRNA_REF=/home/rebmism/reference/genome/human/ucsc/hg19/hg19.ribosomal.interval_list_lessheader.txt	
+MI000053	MI000053_3		done	picard CollectAlignmentSummaryMetrics + CollectRnaSeqMetrics + CombinePicardMetrics.py;DS000001;star 
+MI000053	MI000053_4			picard CollectAlignmentSummaryMetrics + CollectRnaSeqMetrics + CombinePicardMetrics.py;DS000001;hisat2	
+MI000053	MI000053_5		done	picard CollectAlignmentSummaryMetrics + CollectRnaSeqMetrics + CombinePicardMetrics.py;DS000005;hisat2
+MI000053	MI000053_6		done	picard CollectAlignmentSummaryMetrics + CollectRnaSeqMetrics + CombinePicardMetrics.py;DS000005;star
+MI000053	MI000053_7		done	INPATH=MI000058_2
+MI000053	MI000053_8		done	INPATH=MI000058_3
+MI000053	MI000053_9			INPATH=
+MI000053	MI000053_10
+MI000054	MI000054_1		done	combine MarkDups metric;MI000044_2
+MI000054	MI000054_2		done	combine MarkDups metric;MI000048_2
+MI000055	MI000055_1			converting Stringtie gene abundance to counts
+MI000055	MI000055_2			convert Stringtie transcript abundance to counts
+MI000055	MI000055_3			convert Stringtie gene abundance to counts;INPUT=MI000051_7
+MI000055	MI000055_4			convert Stringtie gene abundance to counts;INPUT=MI000051_8
+MI000055	MI000055_5	convert Stringtie gene abundance to counts;INPUT=MI000051_9
+MI000056	MI000056_1			test extracting tcr sequence from rnaseq
+MI000056	MI000056_2			extracting tcr sequence from rnaseq;DS000006;deleted dir
+MI000056	MI000056_3			repeat 56_2 to generate log files;deleted dir
+MI000056	MI000056_4		done	mixcr;F26
+MI000056	MI000056_5			mixcr;new tbln
+MI000056	MI000056_6	mixcr; MI000069_1-H73
+MI000056        MI000056_7	mixcr; MI000069_3-H01
+MI000056        MI000056_8	mixcr; MI000069_6-concat
+MI000057	MI000057_1			build rsem reference;star v2.7.8a;grch37
+MI000058	MI000058_1		done	modified MI000048 (aln+sort+markdups+post-alnQC);DS000003;star
+MI000058	MI000058_2		qw	aln;DS000001
+MI000058	MI000058_3		qw	aln;DS000005
+MI000058	MI000058_4		done	aln;DS000007;array 1:13
+MI000058	MI000058_5			aln;DS000007;array 14:41
+MI000058	MI000058_6		done	aln;DS000007;H001 4 failed samples
+MI000058	MI000058_7		error	aln;DS000007;H001 samples 23, 35, 37
+MI000058	MI000058_8		done	step 1 (aln);H001 samples 23, 35, 37
+MI000058	MI000058_9		done	aln;modified java param for tmpdir
+MI000058	MI000058_10			aln; cell line GSE120660
+MI000058	MI000058_11		aln; PRJNA219507 Rajan rnaseq
+MI000059	MI000059_1	run star-rsem; MI000069_1-H73
+MI000059	MI000059_2	run star-rsem; MI000069_3-H01
+MI000059        MI000059_3	run star-rsem; MI000069_6-concat-ed files
+MI000060	MI000060_1			modified MI000058_1;star 2pass
+MI000061	MI000061_1		done	step 1 call sv using delly for one sample
+MI000061	MI000061_2		done	step 1 call sv using delly for one sample;fixed RG issue
+MI000061	MI000061_3			step 2 somatic filtering for one sample
+MI000061	MI000061_4
+MI000062	MI000062_1		done	replace read group in merged bam file
+MI000062	MI000062_2		done	repeat replace RG for merged file correcting for SM (sample name)
+MI000063	MI000063_1			count reads per read group ID in merged bam
+MI000064	MI000064_1			Mark duplicate for multiple files using array job
+MI000065	MI000065_1			get numbers from samtools (total and mapped reads)
+MI000066				modified from MI000058;star 2-pass;incorporate star-fusion
+MI000067	MI000067_1		fastqc array job; H94
+MI000068	MI000068_1		convert cram to fastq
+MI000069	MI000069_1	adaptor trim;array;H73
+MI000069	MI000069_2	adaptor trim;array;F26
+MI000069	MI000069_3	adaptor trim;array;H01
+MI000069	MI000069_4	adaptor trim;array;Trombone x10
+MI000069	MI000069_5	adaptor trim;array;Decipher
+MI000069	MI000069_6	adaptor trim;array;concat-ed multilane samples (Decipher, F26, TROMBONEx10)
+MI000070	MI000070_1	aln;Decipher
+MI000070	MI000070_2	aln;MI000069;H73,F26,H01,Trombone x10
+MI000070	MI000070_3	aln;PRJNA219507 Rajan rnaseq
+MI000071	MI000071_1	merge bam files;MI000070_1;decipher
+MI000071	MI000071_2	merge bam files;MI000070_2;F26 + Trombone TBLN
+MI000072	MI000072_1	stringtie quantification;MI000071_1;decipher
+MI000072	MI000072_2	stringtie quantification;MI000071_2;F26 + Trombone TBLN
+MI000072	MI000072_3	stringtie quantification;MI000070_2;H73 + H01
+MI000072	MI000072_4	stringtie quantification;MI000070_3;PRJNA219507 Rajan rnaseq
+MI000073	MI000073_1	extract read count;MI000072_[1-3]
+MI000073	MI000073_2	extract read count;MI000072_4
+MI000074	MI000074_1	qc on individual files;PRJNA219507 Rajan rnaseq
+MI000075	MI000075_1	multiqc
+MI000076	MI000076_1	Arriba download references and build STAR index
+MI000077	MI000077_1	STAR-Arriba; MI000069_1-H73
+MI000077        MI000077_2	STAR-Arriba; MI000069_3-H01
+MI000077        MI000077_3	STAR-Arriba; MI000069_6-concat
+MI000078	MI000078_1	concatenate multi-lane fq files;Decipher, F26, TROMBONEx10
