@@ -31,6 +31,7 @@ MI000007	MI000007_3	2018-11-20		run transcript assembly and quantification using
 MI000007	MI000007_4	2018-11-20		run transcript assembly and quantification using hisat with -e option;F260001-3
 MI000008	MI000008_1	2018-11-13		create index for reference genome (samtools)
 MI000008	MI000008_2	06/21/2019 16:06:03		create index for ref genome sans ercc
+MI000008	MI000008_3	create index for ref genome;grch38
 MI000009	MI000009_1	2018-11-20		converting stringtie output for deseq2
 MI000010	MI000010_1	2018-12-03		create index for reference transcript (kallisto)
 MI000010	MI000010_2	07/04/2019 23:56:11		create kallisto index;hg19
@@ -47,6 +48,8 @@ MI000014	MI000014_1	2018-12-11		create star genome index
 MI000014	MI000014_2	07/06/2019 13:33:49		create genome index; STAR; hg19
 MI000014	MI000014_3	07/06/2019 14:08:04		create genome index; STAR; hg38
 MI000014	MI000014_4		create genome index; STAR; grch37
+MI000014	MI000014_5	create genome index; STAR; grch38
+MI000014	MI000014_6	create genome index; STAR-2.7.10a; grch38
 MI000015	MI000015_1	2018-12-17		align without adaptor trimming using star;F26 and MAP samples;multi-thread
 MI000016	MI000016_1	2018-12-18		convert SAM to sorted BAM for output from hisat2 and star
 MI000016	MI000016_2	2018-12-19		rerun indexing due to syntax error;missing double quotes
@@ -120,15 +123,16 @@ MI000033	MI000033_2	02/11/2019 15:52:36		repeat marking dups for F260009;increas
 MI000033	MI000033_3			aln+sort+markdups+index for F260009; aln once
 MI000034	MI000034_1	02/11/2019 22:44:17	done	create fastq for index reads;BC;deleted dir
 MI000034	MI000034_2	02/12/2019 10:59:57	done	BC create fastq for index reads with params;deleted dir
-MI000035	MI000035_1	03/04/2019 09:16:13		download lncap data from NCBI SRA
-MI000035	MI000035_2	03/05/2019 10:06:30		continue download lncap data from NCBI
-MI000035	MI000035_3	03/06/2019 19:34:52		download dmso treated lncap data
-MI000035	MI000035_4	03/07/2019 10:00:00		download SRA files from list using fastq-dump;array job
-MI000035	MI000035_5	03/22/2019 10:00:00		download cell line hormone treated and untreated
-MI000035	MI000035_6	03/28/2019 09:54:35		download cell line data from same set as PC meth data
-MI000035	MI000035_7					download cell line androgen treated and untreated;GSE120660
-MI000035	MI000035_8			download cell line;GSE120660
-MI000035	MI000035_9			download treated untreated rnaseq;PRJNA219507
+MI000035	MI000035_1	download lncap data from NCBI SRA
+MI000035	MI000035_2	continue download lncap data from NCBI
+MI000035	MI000035_3	download dmso treated lncap data
+MI000035	MI000035_4	download SRA files from list using fastq-dump;array job
+MI000035	MI000035_5	download cell line hormone treated and untreated
+MI000035	MI000035_6	download cell line data from same set as PC meth data
+MI000035	MI000035_7	download cell line androgen treated and untreated;GSE120660
+MI000035	MI000035_8	download cell line;GSE120660
+MI000035	MI000035_9	download treated untreated rnaseq;PRJNA219507
+MI000035	MI000035_10	download cell line data; PRJNA493954; vcap and lcap with without androgen
 MI000036	MI000036_1	03/05/2019 14:08:50		run fastqc and multiqc on downloaded data;lncap from NCBI
 MI000037	MI000037_1	03/11/2019 21:23:29		align lncap sra data treated vs untreated
 MI000037	MI000037_2	2019/03/25 11:04:32		align lncap and vcap sra data
@@ -207,7 +211,10 @@ MI000056	MI000056_5			mixcr;new tbln
 MI000056	MI000056_6	mixcr; MI000069_1-H73
 MI000056        MI000056_7	mixcr; MI000069_3-H01
 MI000056        MI000056_8	mixcr; MI000069_6-concat
-MI000057	MI000057_1			build rsem reference;star v2.7.8a;grch37
+MI000057	MI000057_1	build rsem reference;star v2.7.8a;grch37
+MI000057	MI000057_2	build rsem reference;star v2.7.8a;grch38
+MI000057	MI000057_3	build rsem reference; rsem v1.3.3; star v2.7.10a;grch38
+MI000057	MI000057_4	build rsem reference; rsem v1.2.31; star v2.7.10a;grch38
 MI000058	MI000058_1		done	modified MI000048 (aln+sort+markdups+post-alnQC);DS000003;star
 MI000058	MI000058_2		qw	aln;DS000001
 MI000058	MI000058_3		qw	aln;DS000005
@@ -221,7 +228,13 @@ MI000058	MI000058_10			aln; cell line GSE120660
 MI000058	MI000058_11		aln; PRJNA219507 Rajan rnaseq
 MI000059	MI000059_1	run star-rsem; MI000069_1-H73
 MI000059	MI000059_2	run star-rsem; MI000069_3-H01
-MI000059        MI000059_3	run star-rsem; MI000069_6-concat-ed files
+MI000059	MI000059_3	run star-rsem; MI000069_6-concat-ed files
+MI000059	MI000059_4	run star-rsem; MI000069_10-arneo;grch37
+MI000059	MI000059_5	run star-rsem; MI000069_10-arneo;grch38
+MI000059	MI000059_6	run star-rsem;MI000069_11;J43 peace + cascade + trombone + paradigm
+MI000059	MI000059_7	run star-rsem;MI000069_13;J32 arneo + pwb
+MI000059	MI000059_8	run star-rsem; arneo
+MI000059	MI000059_9	run star-rsem; trombone
 MI000060	MI000060_1			modified MI000058_1;star 2pass
 MI000061	MI000061_1		done	step 1 call sv using delly for one sample
 MI000061	MI000061_2		done	step 1 call sv using delly for one sample;fixed RG issue
@@ -234,28 +247,111 @@ MI000064	MI000064_1			Mark duplicate for multiple files using array job
 MI000065	MI000065_1			get numbers from samtools (total and mapped reads)
 MI000066				modified from MI000058;star 2-pass;incorporate star-fusion
 MI000067	MI000067_1		fastqc array job; H94
-MI000068	MI000068_1		convert cram to fastq
+MI000068	MI000068_1	convert cram to fastq;su2c
+MI000068	MI000068_2	convert cram to fastq;remainder su2c;copied contents to 68_1 and deleted
+MI000068	MI000068_3	convert cram to fastq;su2c;add collate step first to shuffle order
 MI000069	MI000069_1	adaptor trim;array;H73
 MI000069	MI000069_2	adaptor trim;array;F26
 MI000069	MI000069_3	adaptor trim;array;H01
 MI000069	MI000069_4	adaptor trim;array;Trombone x10
 MI000069	MI000069_5	adaptor trim;array;Decipher
 MI000069	MI000069_6	adaptor trim;array;concat-ed multilane samples (Decipher, F26, TROMBONEx10)
+MI000069	MI000069_7	adaptor trim;array;I82
+MI000069	MI000069_8	adaptor trim;array;I88
+MI000069	MI000069_9	adaptor trim;array;I98
+MI000069	MI000069_10	adaptor trim;array;I82,I88,I98
+MI000069	MI000069_11	adaptor trim;array;J43
+MI000069	MI000069_12	adaptor trim; re-run job 6 from previous
+MI000069	MI000069_13	adaptor trim;array;J32
+MI000069	MI000069_14	adaptor trim; array 35-89; H01, H73
+MI000069	MI000069_15	adaptor trim; array 1-37; I51
+MI000069	MI000069_16	adaptor trim; array 38-74; I51
 MI000070	MI000070_1	aln;Decipher
 MI000070	MI000070_2	aln;MI000069;H73,F26,H01,Trombone x10
 MI000070	MI000070_3	aln;PRJNA219507 Rajan rnaseq
+MI000070	MI000070_4	aln;SU2C
 MI000071	MI000071_1	merge bam files;MI000070_1;decipher
 MI000071	MI000071_2	merge bam files;MI000070_2;F26 + Trombone TBLN
+MI000071	MI000071_3	merge bam files; MI000080_2;decipher
+MI000071	MI000071_4	merge bam files; MI000080_3;F26,Trombone x10
 MI000072	MI000072_1	stringtie quantification;MI000071_1;decipher
 MI000072	MI000072_2	stringtie quantification;MI000071_2;F26 + Trombone TBLN
 MI000072	MI000072_3	stringtie quantification;MI000070_2;H73 + H01
 MI000072	MI000072_4	stringtie quantification;MI000070_3;PRJNA219507 Rajan rnaseq
 MI000073	MI000073_1	extract read count;MI000072_[1-3]
 MI000073	MI000073_2	extract read count;MI000072_4
-MI000074	MI000074_1	qc on individual files;PRJNA219507 Rajan rnaseq
+MI000073	MI000073_3	extract read count; MI000081_1-4
+MI000073	MI000073_4	extract read count; MI000081_6
+MI000073	MI000073_5	extract read count; MI000081_7
+MI000074	MI000074_1	fastqc;PRJNA219507 Rajan rnaseq
+MI000074	MI000074_2	fastqc;MI000069_1-H73
+MI000074        MI000074_3	fastqc;MI000069_3-H01
+MI000074        MI000074_4	fastqc;MI000069_6-concat 
+MI000074	MI000074_5	fastqc;I51_run1247 + I51_run1248
+MI000074	MI000074_6	fastqc;I51_run1247
+MI000074	MI000074_7	fastqc;I51_run1248
+MI000074	MI000074_8	fastqc;adaptor-trimmed;I51_run1247
+MI000074	MI000074_9	fastqc;adaptor-trimmed;I51_run1248
 MI000075	MI000075_1	multiqc
-MI000076	MI000076_1	Arriba download references and build STAR index
+MI000075	MI000075_2	multiqc; MI000074_5; I51_run1247 + I51_run1248; trombone wes
+MI000075	MI000075_3	multiqc;MI000074_8
+MI000075	MI000075_4	multiqc;MI000074_9
+MI000075	MI000075_5	multiqc;MI000074_6
+MI000075	MI000075_6	multiqc;MI000074_7
+MI000076	MI000076_1	Arriba download references and build STAR index GRCh37+GENCODE19
+MI000076	MI000076_2	Arriba download references and build STAR index GRCh38+ENSEMBL93
+MI000076	MI000076_3	Arriba download references and build STAR index GRCh38+ENSEMBL93; arriba_v2.2.1, STAR-2.7.10a
 MI000077	MI000077_1	STAR-Arriba; MI000069_1-H73
 MI000077        MI000077_2	STAR-Arriba; MI000069_3-H01
 MI000077        MI000077_3	STAR-Arriba; MI000069_6-concat
+MI000077	MI000077_4	STAR-Arriba; MI000069_4-Trombonex4_multilane
+MI000077	MI000077_5	STAR-Arriba; MI000069_5-arneo-pwb
+MI000077	MI000077_6	STAR-Arriba; MI000069_10 arneo pwb
+MI000077	MI000077_7	STAR-Arriba; MI000069_13 J32 
 MI000078	MI000078_1	concatenate multi-lane fq files;Decipher, F26, TROMBONEx10
+MI000078	MI000078_2	merge multi-lane fq; to correct for order of files read; Decipher
+MI000079	MI000079_1	singularity arriba-draw_fusion
+MI000080	MI000080_1	aln; modified from MI000070;I82
+MI000080	MI000080_2	aln; modified from MI000070; Decipher
+MI000080	MI000080_3	aln; modified from MI000070; MI000069; H73,F26,H01,Trombone x10
+MI000080	MI000080_4	aln;I82;samples failed from 81_1 and 80_3
+MI000080	MI000080_5	aln;I88
+MI000080	MI000080_6	aln;I88; failed from 80_5; sample ID (job ID) => I880011 (17), I880012 (36), I880020 (48)
+MI000080	MI000080_7	aln;I98
+MI000081	MI000081_1	stringtie quant;mod MI000072 for grch38;MI000080_1;I82 56/60 samples
+MI000081	MI000081_2	stringtie quant; MI000071_3; decipher merged bam
+MI000081	MI000081_3	stringtie quant; MI000080_3; H73 + H01
+MI000081	MI000081_4	stringtie quant; MI000080_4; failed from 80_1 and 80_3
+MI000081	MI000081_5	stringtie quant; MI000071_4; F26 + TBLNx10 merged bam
+MI000081	MI000081_6	stringtie quant; MI000080_5 + MI000080_6; I88 + I880020 failed
+MI000081	MI000081_7	stringtie quant; MI000080_7
+MI000082	MI000082_1	aln; modified from MI000080; STAR-2.7.10a; keep unmapped; 1st pass;arneo
+MI000083	MI000083_1	rsem-star; modified from MI000059; cell line
+MI000084	MI000084_1	indexing genome with annotations from star 1st pass; modified from MI000014
+MI000085	MI000085_1	aln; modified from MI000080; STAR-2.7.10a; keep unmapped; 2nd pass;arneo	
+MI000086	MI000086_1	pcfselect pre-process; test
+MI000086	MI000086_2	pcfselect pre-process; J61 arneo
+MI000087	MI000087_test	pcfselect main; test
+MI000087	MI000087_1	pcfselect main; arneo batch 1
+--MI000088	MI000088_1	picard hsmetrics; output from preProcess; arneo batch 1
+MI000089	MI000089_1	generate picard files; sequence dict
+--MI000090	MI000090_1	generate picard files; interval lists
+MI000091	MI000091_1	search for adapter sequence
+MI000091	MI000091_2	search for adapter sequence; decipher concat
+MI000091	MI000091_3	search for adapter sequence; decipher concat
+MI000091	MI000091_4	search for adapter sequence; trombone rnaseq
+MI000091_v2	MI000091_5	search for adapter sequence; trombone rnaseq; J43
+MI000091_v3	MI000091_6	search for adapter sequence; trombone rnaseq; trimmomatic
+MI000091_v3	MI000091_7	search for adapter sequence; trombone wes; trimmomatic; MI000069_15
+MI000092	MI000092_1	adapter trim; bbduk; array 1:37 I51_run1247
+MI000092	MI000092_2	adapter trim; bbduk; array 38:74 I51_run1248
+MI000092	MI000092_3	adapter trim; bbduk; trombone rnaseq
+MI000092_v2	MI000092_4	adapter trim; bbduk; trombone rnaseq; J43
+MI000093	MI000093_1	mod MI000059; run star-rsem; pattern match for non-adapter trimmed fq
+MI000093	MI000093_2	run star-rsem; decipher
+MI000094	MI000094_1	mod MI000091; search for adapter sequence; post-trim; array 1:74 I52_bbduk-clean 
+MI000094	MI000094_2	mod MI000091; search for adapter sequence; post-trim; array 75:148 I51_bbduk-clean
+MI000095	MI000095_1	bwa build FM index for ref genome
+MI000096	MI000096_1	bwa align; trombone wes
+--MI000096	MI000096_2	bwa align; trombone wes; increase time and memory
+
