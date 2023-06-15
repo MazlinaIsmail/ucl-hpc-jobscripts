@@ -13,7 +13,9 @@
 
 shopt -s expand_aliases
 
-source $HOME/additional/dependencies_nfcore_rnaseq.source
+# load source file to point to genome v38
+# currently not working
+# source $HOME/additional/dependencies_nfcore_rnaseq.source
 module load blic-modules
 module load nfcore/rnaseq/3.10.1
 
